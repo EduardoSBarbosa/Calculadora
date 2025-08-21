@@ -1,0 +1,241 @@
+/* Estilos globais e para dispositivos móveis (Mobile-First) */
+body 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, rgb(3, 3, 141), rgb(243, 83, 110));
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#titulo
+{
+    color: #fff; 
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#titulo h1 {
+    font-size: 1.5em; 
+}
+
+#animacao 
+{	
+    background-image: url('./imagens/animacao.PNG'); 
+    background-repeat: repeat-x; 
+    background-size: auto 100%;
+    animation: fundoAnimado 20s linear infinite;
+    width: 100%;
+    height: 100px; 
+    overflow: hidden;  
+} 
+
+@keyframes fundoAnimado
+{
+    from { background-position: 0 0; }
+    to { background-position: 200% 0; }
+}
+                                       
+#calculadora 
+{
+    width: 90%; 
+    max-width: 300px;
+    background-color: #363946;
+    padding: 15px; 
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+}
+
+#visor 
+{
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #fff;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.historico 
+{
+    font-size: 1em; 
+    color: #999;
+}
+
+.resultado 
+{
+    font-size: 2em; 
+    font-weight: bold;
+}
+
+#gridBotoes 
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.botoes 
+{
+    background-color: #4B4D5D;
+    color: #fff;
+    border: none;
+    padding: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.1s;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.4); 
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Os estilos para operadores e botões especiais permanecem iguais */
+.operador {
+    background-color: #774eb9;
+}
+.operador:hover {
+    background-color: #b792e9;
+}
+.operador:active {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.6);
+}
+.especial {
+    color: #774eb9;
+}
+.especial:hover {
+    background-color: #b792e9;
+}
+.especial:active {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.6);
+}
+.igual {
+    background-color: #A379E6;
+}
+.igual:hover {
+    background-color: #b792e9;
+}
+.igual:active {
+    background-color: #8f64d1;
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.6);
+}
+.botoes.numero {
+    color: #fff;
+}
+
+/* Media query para tablets e ecrãs grandes (abaixo de 700px de largura) */
+@media (max-width: 700px) {
+    #titulo h1 {
+        font-size: 1.5em;
+    }
+
+    #animacao {
+        height: 120px;
+    }
+
+    #calculadora {
+        max-width: 300px;
+        padding: 20px;
+    }
+
+    #visor {
+        min-height: 100px;
+        padding: 20px 15px;
+    }
+
+    .historico {
+        font-size: 1.2em;
+    }
+
+    .resultado {
+        font-size: 2.5em;
+    }
+
+    .botoes {
+        font-size: 1.3em;
+        gap: 10px;
+    }
+}
+
+/* Media query para ecrãs de desktop (acima de 701px de largura) */
+@media (min-width: 701px) {
+
+     #titulo h1 {
+        font-size: 2em;
+        margin-bottom: auto;
+    }
+
+    #calculadora {
+        max-width: 450px;
+    }
+
+    #visor {
+        min-height: 120px;
+    }
+    
+    .historico {
+        font-size: 1.5em;
+    }
+
+    .resultado {
+        font-size: 3em;
+    }
+
+    .botoes {
+        font-size: 1.5em;
+    }
+} 
+
+/* Media query para tablets e ecrãs grandes (acima de 600px de largura) */
+@media (max-height: 900px) {
+    #titulo h1 {
+        font-size: 2em;
+        margin-bottom: auto;
+    }
+
+    #animacao {
+        height: 100px;
+    }
+
+    #calculadora {
+        max-width: 200px; 
+        padding: 20px;
+    }
+
+    #visor {
+        min-height: 30px;
+        padding: 20px 15px;
+    }
+
+    .historico {
+        font-size: 1.2em;
+    }
+
+    .resultado {
+        font-size: 2.5em;
+    }
+
+    .botoes {
+        font-size: 1.3em;
+        gap: 10px;
+    }
+}
