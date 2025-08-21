@@ -1,4 +1,3 @@
-/* Estilos globais e para dispositivos móveis (Mobile-First) */
 body 
 {
     display: flex;
@@ -107,7 +106,6 @@ body
     align-items: center;
 }
 
-/* Os estilos para operadores e botões especiais permanecem iguais */
 .operador {
     background-color: #774eb9;
 }
@@ -205,7 +203,7 @@ body
     }
 } 
 
-/* Media query para tablets e ecrãs grandes (acima de 600px de largura) */
+/* Media query para tablets e ecrãs grandes (acima de 900px de altura) */
 @media (max-height: 900px) {
     #titulo h1 {
         font-size: 2em;
@@ -238,4 +236,5 @@ body
         font-size: 1.3em;
         gap: 10px;
     }
+
 }
